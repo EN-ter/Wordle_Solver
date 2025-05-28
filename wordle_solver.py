@@ -171,9 +171,7 @@ table_name = 'Possible_answers'
 
 folder_path = os.path.dirname(os.path.abspath(__file__))
 complete_word_list = os.path.join(folder_path, r'wordlist1.csv')
-
-#complete_word_list = r'C:\Users\nussb\OneDrive\Desktop\IBM\wordle\wordlist1.csv'
-possible_answers_db_path =  r'C:\Users\nussb\OneDrive\Desktop\IBM\wordle\possible_answers.db'
+possible_answers_db_path = os.path.join(folder_path, r'possible_answers.db')
 
 possible_answers_df = pd.read_csv(complete_word_list, names = ['Possible_Words'])
 possible_answers_df[['L1', 'L2', 'L3', 'L4', 'L5', 'Score']] = None
