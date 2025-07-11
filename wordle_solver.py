@@ -24,6 +24,8 @@ def word_entry():
     while (len(word) != 5 or word.isalpha() == False or confirmation != 'y' or word not in possible_answers_df['Possible_Words'].values): 
         valid_word = True
         word = str(input(enter_word))
+        word = word.lower()
+        
         if len(word) != 5:
             valid_word=False
             print("\nWORD MUST BE EXACTLY 5 CHARACTERS LONG\n")
